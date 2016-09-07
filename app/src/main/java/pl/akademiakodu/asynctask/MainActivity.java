@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements Animation.Animati
 
 
         Animation animationFade = AnimationUtils.loadAnimation(this, R.anim.fade_in);
-       // animationFade.setFillAfter(true);
+        animationFade.setFillAfter(true);
 
 
          animationFade.setAnimationListener(new Animation.AnimationListener() {
