@@ -16,7 +16,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Animation.AnimationListener {
 
 
     @BindView(R.id.image)
@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         Animation animationFade = AnimationUtils.loadAnimation(this, R.anim.fade_in);
-        animationFade.setFillAfter(true);
+       // animationFade.setFillAfter(true);
+
 
          animationFade.setAnimationListener(new Animation.AnimationListener() {
              @Override
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
              @Override
              public void onAnimationEnd(Animation animation) {
-                 Toast.makeText(MainActivity.this, "Zakonczono animacje!", Toast.LENGTH_LONG).show();
+                // Toast.makeText(MainActivity.this, "Zakonczono animacje!", Toast.LENGTH_LONG).show();
              }
 
              @Override
@@ -53,8 +54,23 @@ public class MainActivity extends AppCompatActivity {
         image.startAnimation(animationFade);
 
 
-     //   image.setAnimation(animationFade);
+     //  image.setAnimation(animationFade);
       //  animationFade.start();
+
+    }
+
+    @Override
+    public void onAnimationStart(Animation animation) {
+
+    }
+
+    @Override
+    public void onAnimationEnd(Animation animation) {
+
+    }
+
+    @Override
+    public void onAnimationRepeat(Animation animation) {
 
     }
 }
