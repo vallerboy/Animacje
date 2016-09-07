@@ -58,21 +58,21 @@ public class MainActivity extends AppCompatActivity  {
                  }else if(msg.what == 2) {
                      animation.stop();
                  }
-                //Log.e("wiadomosc", "to sie nie powinno w ogole wyswietlic");
+
                 return false;
             }
         });
 
-        //handler.sendEmptyMessageDelayed(1, 5000);
-        //handler.sendEmptyMessageDelayed(2, 10000);
+        handler.sendEmptyMessageDelayed(1, 5000);
+        handler.sendEmptyMessageDelayed(2, 10000);
 
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                animation.start();
-            }
-        }, 5000);
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                animation.start();
+//            }
+//        }, 5000);
 
     }
 
